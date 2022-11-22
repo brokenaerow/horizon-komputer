@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Voice Responsive App</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.responsivevoice.org/responsivevoice.js?key=6AqfGK6s"></script> 
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    </head>
+    <body>
+        <center>
+            <h1>Kalam Kudus Education Corner</h1>
+            <div class="container">
+                <h2>Text to Speech App</h2>
+                <textarea id="text" cols="100">
+                    It is a lovely day. Prince Toto, princess Nana, their father, king Joni and their mother, queen Debi
+                    are having a recreation. Prince Toto is eating an apple. Princess Nana is eating a banana. 
+                    Their father and mother are drinking chocolate milk. Their cat and dog join them too. 
+                    They really enjoy the time together.
+                </textarea>
+                <select id="voiceselection"></select> 
+                <br>
+                <input onclick="responsiveVoice.speak($('#text').val(),$('#voiceselection').val());" 
+                  type="button" value="Read this for me" 
+                />                
+                <script>
+                    //Populate voice selection dropdown
+                    var voicelist = responsiveVoice.getVoices();
+                    var vselect = $("#voiceselection");
+                    $.each(voicelist, function() {
+                            vselect.append($("<option />").val(this.name).text(this.name));
+                    });
+                </script>
+            </div>
+        </center>
+    </body>
+</html>

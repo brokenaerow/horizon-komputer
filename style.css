@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(1,2,19);
+}
+
+.container {
+    background-image: url(S1.jpg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 400px;
+    padding: 30px;
+    box-shadow: 0 0 15px 0 #ccc;
+}
+
+.container textarea {
+    font-size: 13px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: white;
+    color: black;
+    width: 390px;
+    height: 100px;
+    resize: none;
+    outline: none;
+    border: 1px solid grey;
+}
+
+h1 {
+    padding: 10px;
+    font-size: 50px;
+    color: whitesmoke;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 5px white;    
+}
+
+h2 {
+    font-size: 40px;
+    color: whitesmoke;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 5px white;    
+}
+
+button {
+    width: 150px;
+    padding: 2px;
+}
